@@ -10,4 +10,8 @@ module com.george.wallet_desktop {
 
     opens com.george.wallet_desktop to javafx.fxml;
     exports com.george.wallet_desktop;
+    exports com.george.wallet_desktop.controller;
+    opens com.george.wallet_desktop.controller to javafx.fxml;
+    exports com.george.wallet_desktop.view;
+    opens com.george.wallet_desktop.view to javafx.fxml;
 }
