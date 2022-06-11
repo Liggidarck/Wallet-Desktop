@@ -7,6 +7,7 @@ module com.george.wallet_desktop {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires com.jfoenix;
 
     opens com.george.wallet_desktop to javafx.fxml;
     exports com.george.wallet_desktop;

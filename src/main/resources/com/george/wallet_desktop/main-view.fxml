@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
@@ -14,122 +14,81 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.george.wallet_desktop.controller.WalletController">
-    <SplitPane dividerPositions="0.29797979797979796" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-            <ScrollPane prefHeight="398.0" prefWidth="175.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                <content>
-                    <VBox prefWidth="175.0">
-                        <HBox minHeight="-Infinity" prefHeight="50.0">
-                            <cursor>
-                                <Cursor fx:constant="DEFAULT" />
-                            </cursor>
-                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                <HBox.margin>
-                                    <Insets left="10.0" top="10.0" />
-                                </HBox.margin>
-                                <Image url="@icons/wallet_logo.png" />
-                            </ImageView>
-                            <Label text="Wallet">
-                                <HBox.margin>
-                                    <Insets left="10.0" top="15.0" />
-                                </HBox.margin>
-                                <font>
-                                    <Font size="18.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <HBox fx:id="hBoxMain" alignment="CENTER_LEFT" focusTraversable="true" minHeight="-Infinity" onMouseClicked="#onMainBoxListener" prefHeight="50.0">
-                            <VBox.margin>
-                                <Insets top="5.0" />
-                            </VBox.margin>
-                            <cursor>
-                                <Cursor fx:constant="OPEN_HAND" />
-                            </cursor>
-                            <opaqueInsets>
-                                <Insets />
-                            </opaqueInsets>
-                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                <HBox.margin>
-                                    <Insets left="10.0" />
-                                </HBox.margin>
-                                <Image url="@icons/home_icon.png" />
-                            </ImageView>
-                            <Label text="Главная">
-                                <HBox.margin>
-                                    <Insets left="10.0" />
-                                </HBox.margin>
-                                <font>
-                                    <Font size="15.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <HBox fx:id="hBoxRecord" minHeight="-Infinity" prefHeight="50.0">
-                            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                <HBox.margin>
-                                    <Insets left="10.0" top="10.0" />
-                                </HBox.margin>
-                                <Image url="@icons/list_icon.png" />
-                            </ImageView>
-                            <Label text="Записи">
-                                <HBox.margin>
-                                    <Insets left="10.0" top="12.0" />
-                                </HBox.margin>
-                                <font>
-                                    <Font size="15.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                        <HBox fx:id="hBoxStatistics" minHeight="-Infinity" prefHeight="50.0">
-                            <children>
-                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@icons/stat_icon.png" />
-                                    </image>
-                                    <HBox.margin>
-                                        <Insets left="10.0" top="10.0" />
-                                    </HBox.margin>
-                                </ImageView>
-                                <Label text="Статистика">
-                                    <HBox.margin>
-                                        <Insets left="10.0" top="12.0" />
-                                    </HBox.margin>
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </HBox>
-                        <HBox fx:id="hBoxPayments" minHeight="-Infinity" prefHeight="50.0">
-                            <children>
-                                <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@icons/time_icon.png" />
-                                    </image>
-                                    <HBox.margin>
-                                        <Insets left="10.0" top="10.0" />
-                                    </HBox.margin>
-                                </ImageView>
-                                <Label text="Платежи">
-                                    <HBox.margin>
-                                        <Insets left="10.0" top="12.0" />
-                                    </HBox.margin>
-                                    <font>
-                                        <Font size="15.0" />
-                                    </font>
-                                </Label>
-                            </children>
-                        </HBox>
-                    </VBox>
-                </content>
-            </ScrollPane>
-        </AnchorPane>
-        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-            <children>
-                <ScrollPane prefHeight="498.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+   <children>
+      <SplitPane dividerPositions="0.26" prefHeight="500.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <items>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0">
                <content>
-                  <BorderPane fx:id="container" />
-               </content></ScrollPane>
-            </children>
-        </AnchorPane>
-    </SplitPane>
+                  <VBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/wallet_logo.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="Wallet">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding>
+                        </HBox>
+                        <VBox>
+                           <children>
+                              <JFXButton fx:id="homeBtn" text="Главная">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </JFXButton>
+                              <JFXButton fx:id="writesBtn" text="Записи">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="statBtn" text="Статистика">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                              <JFXButton fx:id="payBtn" text="Платежи">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </JFXButton>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </VBox.margin>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <BorderPane fx:id="mainContainer" prefHeight="200.0" prefWidth="200.0" />
+         </items>
+      </SplitPane>
+   </children>
 </AnchorPane>
