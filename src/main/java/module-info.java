@@ -3,6 +3,9 @@ module com.george.wallet_desktop {
     requires javafx.fxml;
     requires com.jfoenix;
     requires java.sql;
+    requires org.xerial.sqlitejdbc;
+
+
     opens com.george.wallet_desktop to javafx.fxml;
     exports com.george.wallet_desktop;
     exports com.george.wallet_desktop.controller;
