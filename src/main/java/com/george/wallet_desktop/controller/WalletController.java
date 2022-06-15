@@ -11,7 +11,6 @@ import java.net.URL;
 public class WalletController {
     @FXML
     public BorderPane mainContainer;
-
     @FXML
     private void showHomeView() {
         loadFXML(WalletApplication.class.getResource("home-view.fxml"));

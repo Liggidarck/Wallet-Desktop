@@ -9,7 +9,6 @@ public class HomeController {
     public PieChart ObligatoryPaymentsChart;
     @FXML
     public LineChart TrendLineChart;
-
     @FXML
     private void initialize() {
 
