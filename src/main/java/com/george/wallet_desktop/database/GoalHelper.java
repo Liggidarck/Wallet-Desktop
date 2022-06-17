@@ -1,6 +1,7 @@
 package com.george.wallet_desktop.database;
 
 import com.george.wallet_desktop.model.Account;
+import com.george.wallet_desktop.model.Goal;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -13,22 +14,25 @@ public class GoalHelper {
     Connection connection;
     Statement statement;
 
-    public void open() {
+    public Connection open() {
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:" + DATABASE_LOCATION);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return connection;
     }
 
-    public void insertAccount(Account account) {
-        String name = account.getName();
-        String type = account.getType();
-        int price = account.getPrice();
+    public void insertGoal(Goal goal) {
+        String name = goal.getName();
+        int goalPrice = goal.getGoalPrice();
+        int defaultPrice = goal.getDefaultPrice();
+        String dateGoal = goal.getDateGoal();
+        String color = goal.getColor();
 
-        String query = ("INSERT INTO goals (name, type, price) " + "" +
-                "VALUES('%s', '%s', '%s');").formatted(name, type, price);
+        String query = ("INSERT INTO goals (name, goal_price, default_price, date_goal, color) " + "" +
+                "VALUES('%s', '%s', '%s', '%s', '%s');").formatted(name, goalPrice, defaultPrice, dateGoal, color);
 
         try {
             statement = connection.createStatement();

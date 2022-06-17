@@ -4,14 +4,14 @@ public class Goal {
     String name;
     int goalPrice;
     int defaultPrice;
-    String dareGoal;
+    String dateGoal;
     String color;
 
     public Goal(String name, int goalPrice, int defaultPrice, String dareGoal, String color) {
         this.name = name;
         this.goalPrice = goalPrice;
         this.defaultPrice = defaultPrice;
-        this.dareGoal = dareGoal;
+        this.dateGoal = dareGoal;
         this.color = color;
     }
 
@@ -27,8 +27,8 @@ public class Goal {
         return defaultPrice;
     }
 
-    public String getDareGoal() {
-        return dareGoal;
+    public String getDateGoal() {
+        return dateGoal;
     }
 
     public String getColor() {

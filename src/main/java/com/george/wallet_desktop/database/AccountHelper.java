@@ -14,13 +14,14 @@ public class AccountHelper {
     Connection connection;
     Statement statement;
 
-    public void open() {
+    public Connection open() {
         try {
             Class.forName("org.sqlite.JDBC");
             connection = DriverManager.getConnection("jdbc:sqlite:" + DATABASE_LOCATION);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        return connection;
     }
 
     public void insertAccount(Account account) {
